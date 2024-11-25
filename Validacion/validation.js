@@ -34,7 +34,8 @@ document.getElementById('email').addEventListener('input', (e) => {
   if (domain.length <= 3) {
     isValid = false;
     form.elements['email'].setCustomValidity('el dominio debe tener 3 o más caracteres');
-    document.getElementById('emailError').textContent = 'el dominio debe tener 3 o más caracteres';
+      //document.getElementById('emailError').textContent = 'el dominio debe tener 3 o más caracteres';
+      form.elements['email'].nextElementSibling.textContent = 'el dominio debe tener 3 o más caracteres';
   } else {
     form.elements['email'].setCustomValidity('');
   }
